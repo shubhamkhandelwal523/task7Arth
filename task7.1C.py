@@ -49,6 +49,7 @@ while g:
 		Press 19: Upload file
 		Press 20: Show files on cluster and download file
 		Press 21: Read file contents
+		Press 22: TO EXIT
 		""")
 	print("Press any no. that you want to perform :" , end='')
 	ch = input()
@@ -173,6 +174,10 @@ while g:
 			file_source=input("enter file to be read from cluster:-\n")
 			ip=ip+file_source
 			os.system(ip)
+		elif int(ch) == 22:
+			os.system("exit()")
+			os.system("tput setaf 5")
+			print(t.renderText("\t\t BYE "))
 		else:
 			print("Option Not Supported")
 			input("Enter To Continue......")
